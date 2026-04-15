@@ -18,6 +18,7 @@ We introduce HunyuanWorld-Voyager, a novel video diffusion framework that genera
 
 
 ## 🔥🔥🔥 News!!
+- April 16, 2026: 🤗 We release [HY-World-2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0), state-of-the-art 3D world model! 
 * December 18, 2025: 👋 We release [HunyuanWorld-1.5 (WorldPlay)](https://github.com/Tencent-Hunyuan/HY-WorldPlay), enabling real-time world creation and play!
 * October 22, 2025: 👋 We release [HunyuanWorld-1.1 (WorldMirror)](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror), supporting 3D world creation from videos or multi-view images!
 * October 16, 2025: 👋 We recently propose  [FlashWorld](https://github.com/imlixinyang/FlashWorld), enabling 3DGS world generation in 5~10 seconds on a single GPU!
