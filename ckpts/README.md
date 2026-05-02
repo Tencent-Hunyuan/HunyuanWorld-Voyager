@@ -40,7 +40,7 @@ huggingface-cli download tencent/HunyuanWorld-Voyager --local-dir ./ckpts
 If you encounter slow download speeds in China, you can try a mirror to speed up the download process. For example,
 
 ```shell
-HF_ENDPOINT=https://hf-mirror.com huggingface-cli download tencent/HunyuanVideo-I2V --local-dir ./ckpts
+HF_ENDPOINT=https://hf-mirror.com huggingface-cli download tencent/HunyuanWorld-Voyager --local-dir ./ckpts
 ```
 
 ##### 2. Resume Download

@@ -18,6 +18,10 @@ We introduce HunyuanWorld-Voyager, a novel video diffusion framework that genera
 
 
 ## 🔥🔥🔥 News!!
+- April 16, 2026: 🤗 We release [HY-World-2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0), state-of-the-art 3D world model! 
+* December 18, 2025: 👋 We release [HunyuanWorld-1.5 (WorldPlay)](https://github.com/Tencent-Hunyuan/HY-WorldPlay), enabling real-time world creation and play!
+* October 22, 2025: 👋 We release [HunyuanWorld-1.1 (WorldMirror)](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror), supporting 3D world creation from videos or multi-view images!
+* October 16, 2025: 👋 We recently propose  [FlashWorld](https://github.com/imlixinyang/FlashWorld), enabling 3DGS world generation in 5~10 seconds on a single GPU!
 * Sep 2, 2025: 👋 We release the code and model weights of HunyuanWorld-Voyager. [Download](ckpts/README.md).
 
 > Join our **[Wechat](#)** and **[Discord](https://discord.gg/dNBrdrGGMa)** group to discuss and find help from us.
@@ -355,6 +359,14 @@ cd HunyuanWorld-Voyager
 python3 app.py
 ```
 You need to first upload an image and choose a camera direction to create a condition video. Then, you can type your text prompt and generate the final RGB-D video.
+
+### Export Point Cloud
+After generating RGB-D video content, you can export `ply` file as follows:
+```bash
+cd data_engine
+
+python3 convert_point.py --folder_path "your_input_condition_folder" --video_path "your_output_video_path"
+```
 
 ## ⚙️ Data Engine
 

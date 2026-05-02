@@ -26,7 +26,8 @@ finally:
     os.chdir(original_cwd)
 
 
-def process_images_with_vggt(image_names, model, device):
+def process_images_with_vggt(info, image_names, model, device):
+    original_images, original_width, original_height = info
     # Preprocess images for VGGT model input
     images = load_and_preprocess_images(image_names).to(device)
     
@@ -108,7 +109,7 @@ def process_images(image_dir, model, device):
         img = Image.open(img_path).convert('RGB')
         original_images.append(np.array(img))
     
-    return process_images_with_vggt(image_names, model, device)
+    return process_images_with_vggt((original_images, original_width, original_height), image_names, model, device)
 
 
 def extrinsic_to_colmap_format(extrinsics):

@@ -359,6 +359,14 @@ python3 app.py
 
 您需要首先上传一张图片并选择相机的运动方向，来生成一个条件视频。接下来，您就可以输入文本提示词来生成最终的RGB-D视频。
 
+### 导出点云
+生成RGB-D视频结果之后，你可以用如下方式导出`ply`文件:
+```bash
+cd data_engine
+
+python3 convert_point.py --folder_path "your_input_condition_folder" --video_path "your_output_video_path"
+```
+
 ## ⚙️ 数据引擎
 
 我们发布了混元世界模型-Voyager的数据引擎，可以用于生成可扩展的RGB-D视频训练数据。请参考[data_engine](data_engine/README.md)了解更多细节。

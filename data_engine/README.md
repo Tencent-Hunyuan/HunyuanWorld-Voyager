@@ -26,28 +26,24 @@ conda activate data_engine
 pip install -r requirements.txt
 ```
 
-## 🔑 Run Data Engine
+## 🛠️ Install Environment
 
-We provide a script to run the data engine.
 ```shell
-bash run.sh
-```
-
-# 1. install environment
 # project path
-cd voyager_dataEngine
+cd data_engine
 
-# git clone VGGT
-https://github.com/facebookresearch/vggt.git
+# VGGT
+git clone https://github.com/facebookresearch/vggt.git
 touch vggt/vggt/__init__.py
 
-# git clone MoGe
+# MoGe
 git clone https://github.com/microsoft/MoGe.git
 
-# git clone Metric3Dv2
+# Metric3D
 git clone https://github.com/YvanYin/Metric3D.git
-注释 voyager_dataEngine/Metric3D/mono/utils/comm.py  8-12行
-加上from mono.model.backbones import *
+# !!! important steps:
+# comment out line 8-12 in Metric3D/mono/utils/comm.py
+# and then add from mono.model.backbones import * to Metric3D/mono/utils/comm.py
 
 # pip install environment
 conda create -n voyager_dataengine python=3.10
@@ -56,3 +52,11 @@ pip install -r requirements.txt
 
 # run dataEngine
 bash dataEngine.sh
+```
+
+## 🔑 Run Data Engine
+
+We provide a script to run the data engine.
+```shell
+bash run.sh
+```

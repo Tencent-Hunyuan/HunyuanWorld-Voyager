@@ -94,7 +94,7 @@ class DepthAlignMetric:
         
         return sky_mask
 
-    def get_valid_depth(self, vggt_files, moge_files, input_rgb_files):
+    def get_valid_depth(self, vggt_files, moge_files, input_rgb_files, skyseg_processor, skyseg_model, SKY_CLASS_ID):
         moge_align_depth_list = []
         valid_mask_list = []
         all_valid_max_list = []
@@ -106,14 +106,14 @@ class DepthAlignMetric:
             depth_vggt = cv2.resize(depth_vggt,  dsize=(depth_moge.shape[1], depth_moge.shape[0]), \
                 interpolation=cv2.INTER_LINEAR)
 
-            depth_vggt = torch.from_numpy(depth_vggt).float().cuda()
-            depth_moge = torch.from_numpy(depth_moge).float().cuda()
+            depth_vggt = torch.from_numpy(depth_vggt).float().to(self.device)
+            depth_moge = torch.from_numpy(depth_moge).float().to(self.device)
             
             
             # segmentation sky
             sky_ima_path = os.path.join(self.input_rgb_dir, input_rgb_file)
             sky_mask = self.segment_sky_with_oneformer(sky_ima_path, skyseg_processor, skyseg_model, SKY_CLASS_ID)    
-            sky_mask_tensor = torch.from_numpy(sky_mask).float().cuda()
+            sky_mask_tensor = torch.from_numpy(sky_mask).float().to(self.device)
             sky_mask = (sky_mask_tensor > 0)  # 天空区域为True
             
             valid_masks = (                              # (H, W)
@@ -193,7 +193,7 @@ class DepthAlignMetric:
         SKY_CLASS_ID = 119
         
         moge_align_depth_list, valid_mask_list, all_valid_max_list = self.get_valid_depth(
-            vggt_files, moge_files, input_rgb_files
+            vggt_files, moge_files, input_rgb_files, skyseg_processor, skyseg_model, SKY_CLASS_ID
         )
 
         # 计算所有帧的有效最大值的中位数

@@ -8,7 +8,10 @@ import imageio
 import pyexr
 import cv2
 
-from moge.model.v1 import MoGeModel
+try:
+    from moge.model.v1 import MoGeModel
+except:
+    from MoGe.moge.model.v1 import MoGeModel
 
 
 def parse_args():
