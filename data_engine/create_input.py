@@ -314,11 +314,11 @@ def create_video_input(
         depth[mask] = 1 / (depth[mask] + 1e-6)
         depth_values = depth[mask]
         
-        min_percentile = np.percentile(depth_values, 2)
-        max_percentile = np.percentile(depth_values, 98)
-        value_list.append((min_percentile, max_percentile))
+        min_value = np.percentile(depth_values, min_percentile)
+        max_value = np.percentile(depth_values, max_percentile)
+        value_list.append((min_value, max_value))
 
-        depth[mask] = (depth[mask] - min_percentile) / (max_percentile - min_percentile)
+        depth[mask] = (depth[mask] - min_value) / (max_value - min_value)
         depth[~mask] = depth[mask].min()
         
 
