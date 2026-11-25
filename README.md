@@ -18,15 +18,15 @@ We introduce HunyuanWorld-Voyager, a novel video diffusion framework that genera
 
 
 ## 🔥🔥🔥 News!!
-- April 16, 2026: 🤗 We release [HY-World-2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0), state-of-the-art 3D world model! 
+- April 16, 2026: 🤗 We release [HY-World-2.0](https://github.com/Tencent-Hunyuan/HY-World-2.0), a state-of-the-art 3D world model! 
 * December 18, 2025: 👋 We release [HunyuanWorld-1.5 (WorldPlay)](https://github.com/Tencent-Hunyuan/HY-WorldPlay), enabling real-time world creation and play!
 * October 22, 2025: 👋 We release [HunyuanWorld-1.1 (WorldMirror)](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror), supporting 3D world creation from videos or multi-view images!
 * October 16, 2025: 👋 We recently propose  [FlashWorld](https://github.com/imlixinyang/FlashWorld), enabling 3DGS world generation in 5~10 seconds on a single GPU!
 * Sep 2, 2025: 👋 We release the code and model weights of HunyuanWorld-Voyager. [Download](ckpts/README.md).
 
-> Join our **[Wechat](#)** and **[Discord](https://discord.gg/dNBrdrGGMa)** group to discuss and find help from us.
+> Join our **[Wechat](#)** and **[Discord](https://discord.gg/dNBrdrGGMa)** groups to discuss and find help from us.
 
-| Wechat Group                                     | Xiaohongshu                                           | X                                           | Discord                                           |
+| WeChat Group                                     | Xiaohongshu                                           | X                                           | Discord                                           |
 |--------------------------------------------------|-------------------------------------------------------|---------------------------------------------|---------------------------------------------------|
 | <img src="assets/qrcode/wechat.png"  height=140> | <img src="assets/qrcode/xiaohongshu.png"  height=140> | <img src="assets/qrcode/x.png"  height=140> | <img src="assets/qrcode/discord.png"  height=140> | 
 
@@ -323,7 +323,7 @@ The number of GPUs equals the product of `--ulysses-degree` and `--ring-degree.`
 <table align="center">
 <thead>
 <tr>
-    <th colspan="4">Latency (Sec) for 512x768 (49 frames 50 steps) on 8 x H20 GPU</th>
+    <th colspan="4">Latency (Sec) for 512x768 (49 frames 50 steps) on 8 x H20 GPUs</th>
 </tr>
 <tr>
     <th>1</th>
